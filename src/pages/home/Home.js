@@ -1,11 +1,12 @@
 import React from 'react'
+import Background from './background/Background'
+import FeaturedTour from './featuredTours/FeaturedTour'
 
 export default function Home() {
   return (
     <div >
- <h1 class="text-3xl font-bold underline text-red-600">
-    Hello world!
-  </h1>
+   <Background></Background>
+   <FeaturedTour></FeaturedTour>
   </div>
   )
 }
