@@ -18,7 +18,7 @@ export default function BackgroundContent() {
         </div>
     </div>
         <div>
-          <img src={backgroundImage} alt="backgroundImage" className="w-[90%]" />
+          <img src={backgroundImage} alt="backgroundImage" className="w-[100%]" />
         </div>
       </div>
     </div>

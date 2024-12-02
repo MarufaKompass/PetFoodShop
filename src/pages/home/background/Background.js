@@ -6,7 +6,7 @@ export default function Background() {
     <div>
       <div className="relative h-[50rem]">
         <div
-          className="bg-cover bg-center h-[54rem] border-b-2 border-[#f1f1f1]"
+          className="bg-cover bg-center h-[55rem] "
           style={{ backgroundImage: `url(${backgroundImage})` }}
         ></div>
 
