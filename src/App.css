@@ -39,6 +39,44 @@
 }
 
 
-.container{
-  width: 1450px;
+
+@media (min-width: 576px) {
+  .container {
+    min-width: 640px;
+    max-width: 767px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .container {
+    min-width:768px;
+    max-width:1023px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .container {
+      min-width: 1024px;
+      max-width: 1279px;
+  }
+
+  
+}
+
+@media (min-width: 1280px) {
+  .container {
+      min-width: 1280px;
+      max-width: 1535px;
+  }
+ 
+}
+
+@media (min-width: 1450px) {
+  .container {
+      min-width: 1450px;
+  }
+
+   
 }
