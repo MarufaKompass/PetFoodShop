@@ -11,7 +11,8 @@ module.exports = {
       },
       colors: {
         'gray': 'rgb(115, 115, 115)', 
-        'heading': '#000000'
+        'heading': '#000000',
+          primary: '#d75244',
       },
     },
   },
