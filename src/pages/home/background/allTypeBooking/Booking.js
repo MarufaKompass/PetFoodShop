@@ -30,7 +30,7 @@ export default function Booking() {
               <button>Flight</button>
             </div>
 
-            <div onClick={() => handleTabClick("tab2")}
+            {/* <div onClick={() => handleTabClick("tab2")}
               className={`flex-1  flex items-center gap-2 pr-10 pl-2  text-center font-manrope font-bold text-[16px] text-heading  ${
                 activeTab === "tab2"
                   ? "text-blue-500 border-b-2 border-blue-500 pb-4"
@@ -41,7 +41,7 @@ export default function Booking() {
                 <img src={car} alt="" className="w-[24px] h-[14px]" />
               </div>
               <button >Car</button>
-            </div>
+            </div> */}
 
             <div onClick={() => handleTabClick("tab3")}
               className={`flex-1  flex items-center gap-2 pr-10 pl-2  text-center font-manrope font-bold text-[16px] text-heading  ${
@@ -56,7 +56,7 @@ export default function Booking() {
               <button >Hotel</button>
             </div>
 
-            <div onClick={() => handleTabClick("tab4")}
+            {/* <div onClick={() => handleTabClick("tab4")}
               className={`flex-1  flex items-center gap-2 pr-10 pl-2  text-center font-manrope font-bold text-[16px] text-heading  ${
                 activeTab === "tab4"
                   ? "text-blue-500 border-b-2 border-blue-500 pb-4"
@@ -69,7 +69,7 @@ export default function Booking() {
               <button>
                 Rental
               </button>
-            </div>
+            </div> */}
             <div   onClick={() => handleTabClick("tab5")}
               className={`flex-1  flex items-center gap-2 pr-2 pl-2  text-center font-manrope font-bold text-[16px] text-heading  ${
                 activeTab === "tab5"
@@ -78,9 +78,9 @@ export default function Booking() {
               } focus:outline-none`}
             >
               <div className="flex items-center cursor-pointer">
-                <img src={travelLuggage} alt="" className="w-[18px] h-[18px]" />
+                <img src={travelLuggage} alt="" className="w-[68px] h-[18px]" />
               </div>
-              <button >Tour</button>
+              <button >Packages</button>
             </div>
           </div>
 
@@ -97,9 +97,9 @@ export default function Booking() {
               <Flight></Flight>
             </div>
           )}
-          {activeTab === "tab2" && <div>Content for Tab 2</div>}
+          {/* {activeTab === "tab2" && <div>Content for Tab 2</div>} */}
           {activeTab === "tab3" && <div>Content for Tab 3</div>}
-          {activeTab === "tab4" && <div>Content for Tab 4</div>}
+          {/* {activeTab === "tab4" && <div>Content for Tab 4</div>} */}
           {activeTab === "tab5" && <div>Content for Tab 5</div>}
         </div>
       </div>
