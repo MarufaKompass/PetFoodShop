@@ -2,26 +2,26 @@ import React, { useState, useEffect, useRef } from "react";
 import Search from "../../../../../../components/svg/Search";
 
 export default function Traveler() {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const dropdownRef = useRef(null);
-  
-    const toggleDropdown = () => {
-      setIsDropdownOpen((prev) => !prev);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-  
-    useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
-  
+  }, []);
+
   return (
     <div className="relative" ref={dropdownRef}>
       <div
@@ -32,10 +32,10 @@ export default function Traveler() {
           traveler,Class
         </span>
         <p className="text-[14px] font-[700] leading-[-6px] text-heading font-manrope ">
-          06 Dec 24
+          1 Room, 2 Guests
         </p>
         <p className="text-[12px] font-[500] leading-[-6px] text-gray font-manrope pt-[-6px]">
-         Friday
+          Friday
         </p>
       </div>
 
@@ -55,77 +55,71 @@ export default function Traveler() {
           <div className="mt-1">
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
               <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-              Dhaka, Bangladesh
+                Dhaka, Bangladesh
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
-                Hazrat Shahjalal International Airport 
+                Hazrat Shahjalal International Airport
               </p>
             </div>
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
-            <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-            Chittagong, Bangladesh
+              <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
+                Chittagong, Bangladesh
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
-             
-                Shah Amanat International Airport 
+                Shah Amanat International Airport
               </p>
             </div>
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
-            <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-            Sylhet, Bangladesh
+              <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
+                Sylhet, Bangladesh
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
                 Osmani International Airport
               </p>
             </div>
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
-            <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-            Mumbai,India
+              <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
+                Mumbai,India
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
-    
-                Chhatrapati Shivaji Maharaj International Airport 
+                Chhatrapati Shivaji Maharaj International Airport
               </p>
             </div>
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
-            <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-            New Delhi, India
+              <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
+                New Delhi, India
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
-  
-                Indira Gandhi International Airport 
+                Indira Gandhi International Airport
               </p>
             </div>
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
-            <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-            London, United Kingdom
+              <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
+                London, United Kingdom
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
-             
-                Heathrow Airport 
+                Heathrow Airport
               </p>
             </div>
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
-            <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-            Los Angeles, USA
+              <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
+                Los Angeles, USA
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
-        
-                Los Angeles International Airport 
+                Los Angeles International Airport
               </p>
             </div>
             <div className="px-4 py-1 hover:bg-gray-100 cursor-pointer">
-            <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
-            Singapore
+              <p className="text-[15px] font-[400] leading-[22px] text-heading font-manrope">
+                Singapore
               </p>
               <p className="text-[13px] font-[400] leading-[18px] text-gray font-manrope">
-           
-                Singapore Changi Airport 
+                Singapore Changi Airport
               </p>
             </div>
           </div>
         </div>
       )}
     </div>
-  )
+  );
 }
