@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../../../images/home/background.png";
+import backgroundImage from "../../../images/home/main/background.png";
 import BackgroundContent from "./BackgroundContent";
 export default function Background() {
   return (

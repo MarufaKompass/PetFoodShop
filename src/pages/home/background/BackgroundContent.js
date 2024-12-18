@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../../../images/home/backgroundImage.png";
+import backgroundImage from "../../../images/home/main/backgroundImage.png";
 import Booking from './allTypeBooking/Booking';
 export default function BackgroundContent() {
   return (
