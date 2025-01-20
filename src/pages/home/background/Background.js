@@ -79,7 +79,7 @@ export default function Background() {
               }`}
               style={{ backgroundImage: `url(${image})` }}
             >
-              <div className="w-2/6 md:h-screen bg-[rgba(16,136,150,0.4)] rounded-tr-[70%] rounded-br-[0%] rounded-bl-[0%] rounded-tl-[0%] flex items-center justify-center text-white text-3xl  ">
+              <div className="w-2/6 md:h-screen    bg-[rgba(229,145,66,0.6)]   rounded-tr-[70%] rounded-br-[0%] rounded-bl-[0%] rounded-tl-[0%] flex items-center justify-center text-white text-3xl  ">
                 Right Side Content
               </div>
             </div>
@@ -123,7 +123,7 @@ export default function Background() {
             ></button>
           ))}
         </div>
-        <div className=" absolute bottom-0 w-screen bg-[#f1f1f1] h-[15%] rounded-t-[100%]"></div>
+        <div className=" absolute bottom-0 w-screen bg-[#f8f8f8] h-[15%] rounded-t-[100%]"></div>
       </div>
     </div>
   );
