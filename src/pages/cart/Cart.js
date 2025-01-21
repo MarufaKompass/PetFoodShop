@@ -120,7 +120,7 @@ export default function Cart() {
                 <span className="font-semibold">Total</span>
                 <span className="font-semibold">{total.toFixed(2)} ৳</span>
               </div>
-              <button className="btn bg-primary text-white btn-block mt-4 flex items-center justify-center  font-lato text-[16px]">
+              <button className="btn bg-primary text-white     hover:bg-[#ce823b] rounded-none  btn-block mt-4 flex items-center justify-center  font-lato text-[16px]">
                 Proceed to Checkout <ArrowRight size={16} className="ml-2" />
               </button>
             </div>
