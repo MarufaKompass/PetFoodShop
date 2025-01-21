@@ -19,10 +19,11 @@ module.exports = {
       colors: {
         gray: "rgb(115, 115, 115)",
         heading: "#000000",
-        primary: "#108896",
+        primary: "#e59142",
         textColor: "#08284a",
         badgeHot: "#FF0000",
         badgeGreen: "#008000",
+        footerText:'#939393'
       },
 
       screens: {

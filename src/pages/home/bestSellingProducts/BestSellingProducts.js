@@ -12,7 +12,7 @@ export default function BestSellingProducts() {
     {
       id: 1,
       name: "Magic Coat Deluxe Love Pet Glove",
-      category: "Toys",
+      category: "new-product",
       price: 9.99,
       rating: 4.5,
       image: bestProduct01,
@@ -21,7 +21,7 @@ export default function BestSellingProducts() {
     {
       id: 2,
       name: "WholeHearted Grain Free All Life Stages Duck",
-      category: "Wet Food",
+      category: "on-sale",
       price: 29.99,
       rating: 4.8,
       image: bestProduct03,
@@ -29,70 +29,109 @@ export default function BestSellingProducts() {
     {
       id: 3,
       name: "The Proudest Rainbow Be Proud Dress",
-      category: "Furniture",
+      category: "best-selling",
       price: 59.99,
       rating: 4.2,
       image: bestProduct02,
-      isNew: true 
+  
     },
     {
       id: 4,
       name: "Bird Seed Mix",
-      category: "Food",
+      category: "new-product",
       price: 14.99,
       rating: 4.6,
       image: bestProduct04,
+      isHotSell: true 
     },
     {
       id: 5,
       name: "Hamster Exercise Wheel",
-      category: "Toys",
+      category: "on-sale",
       price: 19.99,
       rating: 4.3,
       image: bestProduct05,
-      isNew: true 
+      isHotSell: true 
     },
     {
       id: 6,
       name: "Fish Tank Decor",
-      category: "Accessories",
+      category: "best-selling",
       price: 24.99,
       rating: 4.1,
       image: bestProduct06,
       isHotSell: true 
     },
+    {
+      id: 7,
+      name: "Bird Cage Swing",
+      category: "featured-product",
+      price: 14.99,
+      rating: 4.5,
+      image: bestProduct01,
+    },
+    {
+      id: 8,
+      name: "Pet Grooming Brush",
+      category: "featured-product",
+      price: 12.99,
+      rating: 4.7,
+      image: bestProduct02,
+    },
+    {
+      id: 9,
+      name: "Cat Scratching Post",
+      category: "best-selling",
+      price: 29.99,
+      rating: 4.6,
+      image: bestProduct03,
+    },
+    {
+      id: 10,
+      name: "Dog Chew Toy",
+      category: "best-selling",
+      price: 9.99,
+      rating: 4.2,
+      image: bestProduct04,
+    },
   ];
 
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [activeTab, setActiveTab] = useState("best-selling")
 
-  const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter((product) => product.category === selectedCategory);
+  const filteredProducts = products.filter((product) => product.category === activeTab)
 
   return (
     <section className="container mx-auto px-4 py-16">
       <div className="mb-[30px]">
-          <h1 className=" font-lato text-[28px] md:text-[48px] font-[700] text-heading  border-b border-[#f1f1f1] pb-[30px] ">
+          {/* <h1 className=" font-lato text-[28px] md:text-[42px] font-[700] text-heading  border-b border-[#f1f1f1] pb-[30px] ">
           Best Selling Products 
-          </h1>
+          </h1> */}
          
         </div>
-      <div className="flex justify-end mb-6">
-        <select
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="p-2 border border-[#f1f1f1] rounded-none w-[16%]  focus:outline-none focus:ring-0"
-        >
-          <option value="" disabled selected>
-            Select category
-          </option>
-          <option value="All" className="font-lato font-medium text-[14px] text-gray">All Categories</option>
-          <option value="Toys" className="font-lato font-medium text-[14px] text-gray">Toys</option>
-          <option value="Food" className="font-lato font-medium text-[14px] text-gray">Food</option>
-          <option value="Furniture" className="font-lato font-medium text-[14px] text-gray">Furniture</option>
-          <option value="Accessories" className="font-lato font-medium text-[14px] text-gray">Accessories</option>
-        </select>
-      </div>
+     
+
+
+
+          <div className="tabs tabs-boxed justify-center mb-8 border-b border-[#f1f1f1] pb-[30px] ">
+          <a className={`tab ${activeTab === "best-selling" ? "tab-active" : ""}`} onClick={() => setActiveTab("best-selling")}>
+          best Selling
+          </a>
+          <a className={`tab ${activeTab === "featured-product" ? "tab-active" : ""}`} onClick={() => setActiveTab("featured-product")}>
+          Featured Product
+          </a>
+          <a className={`tab ${activeTab === "on-sale" ? "tab-active" : ""}`} onClick={() => setActiveTab("on-sale")}>
+          On Sale
+          </a>
+          <a className={`tab ${activeTab === "new-product" ? "tab-active" : ""}`} onClick={() => setActiveTab("new-product")}>
+          New Product
+          </a>
+        </div>
+
+
+
+
+      
+
       <div className="grid  grid-cols-1  xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8   px-8 xs:px-0">
         {filteredProducts.map((product) => (
           <div
@@ -149,6 +188,9 @@ export default function BestSellingProducts() {
           </div>
         ))}
       </div>
+
+
+ 
     </section>
   );
 }

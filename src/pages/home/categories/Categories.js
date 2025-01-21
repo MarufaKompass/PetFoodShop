@@ -15,7 +15,7 @@ export default function Categories() {
   const [categories] = useState([
     {
       id: 1,
-      image: sliderProduct01, // Replace with actual image URL
+      image: sliderProduct01,
       title: "Dog Food",
       category: "Food",
       star: 4.5,
@@ -23,7 +23,7 @@ export default function Categories() {
     },
     {
       id: 2,
-      image: sliderProduct02, // Replace with actual image URL
+      image: sliderProduct02,
       title: "Cat Toys",
       category: "Toys",
       star: 4.2,
@@ -31,7 +31,7 @@ export default function Categories() {
     },
     {
       id: 3,
-      image: sliderProduct03, // Replace with actual image URL
+      image: sliderProduct03,
       title: "Bird Seeds",
       category: "Food",
       star: 4.8,
@@ -39,7 +39,7 @@ export default function Categories() {
     },
     {
       id: 4,
-      image: sliderProduct04, // Replace with actual image URL
+      image: sliderProduct04,
       title: "Fish Tank",
       category: "Aquarium",
       star: 4.0,
@@ -47,7 +47,7 @@ export default function Categories() {
     },
     {
       id: 5,
-      image: sliderProduct05, // Replace with actual image URL
+      image: sliderProduct05,
       title: "Reptile Supplies",
       category: "Reptiles",
       star: 4.3,
@@ -55,7 +55,7 @@ export default function Categories() {
     },
     {
       id: 6,
-      image: sliderProduct06, // Replace with actual image URL
+      image: sliderProduct06,
       title: "Dog Food",
       category: "Food",
       star: 4.5,
@@ -63,7 +63,7 @@ export default function Categories() {
     },
     {
       id: 7,
-      image: sliderProduct01, // Replace with actual image URL
+      image: sliderProduct01,
       title: "Cat Toys",
       category: "Toys",
       star: 4.2,
@@ -71,7 +71,7 @@ export default function Categories() {
     },
     {
       id: 8,
-      image: sliderProduct02, // Replace with actual image URL
+      image: sliderProduct02,
       title: "Bird Seeds",
       category: "Food",
       star: 4.8,
@@ -79,7 +79,7 @@ export default function Categories() {
     },
     {
       id: 9,
-      image: sliderProduct03, // Replace with actual image URL
+      image: sliderProduct03,
       title: "Fish Tank",
       category: "Aquarium",
       star: 4.0,
@@ -87,23 +87,24 @@ export default function Categories() {
     },
     {
       id: 10,
-      image: sliderProduct04, // Replace with actual image URL
+      image: sliderProduct04,
       title: "Reptile Supplies",
       category: "Reptiles",
       star: 4.3,
       price: "$35.00",
     },
-    // Add more categories as needed
   ]);
   return (
     <div className="py-10">
       <div className="container mx-auto">
-        <h2 className=" font-lato text-[28px] md:text-[48px] font-[700] text-heading  border-b border-[#777575] pb-[30px] mb-[30px]">Shop by Category</h2>
+        <h2 className=" font-lato text-[28px] md:text-[48px] font-[700] text-heading  border-b border-[#777575] pb-[30px] mb-[30px]">
+          Shop by Category
+        </h2>
 
         <Swiper
           spaceBetween={30}
           slidesPerView={6}
-            navigation={true}
+          navigation={true}
           freeMode={true}
           pagination={{
             clickable: true,
@@ -112,13 +113,13 @@ export default function Categories() {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay,FreeMode, Navigation]}
+          modules={[Autoplay, FreeMode, Navigation]}
           className="mySwiper"
         >
           {categories.map((category) => (
             <SwiperSlide key={category.id}>
-              <div className="w-48 ">
-                <div className="flex items-center justify-center rounded-full w-48 h-48  shadow-md p-4 bg-[#fff]">
+              <div className="w-48 cursor-pointer">
+                <div className="flex items-center justify-center rounded-tl-[100px] rounded-tr-[10px] rounded-br-[100px] rounded-bl-[100px] w-48 h-48  shadow-md p-4 bg-[#fff]">
                   <img
                     src={category.image}
                     alt={category.title}
@@ -131,7 +132,9 @@ export default function Categories() {
                     <h3 className="font-lato font-bold text-[18px] text-heading  text-center ">
                       {category.title}
                     </h3>
-                    <span className="font-lato font-medium text-textCategory text-gray flex justify-center">{category.category}</span>
+                    <span className="font-lato font-medium text-textCategory text-gray flex justify-center">
+                      {category.category}
+                    </span>
                   </div>
                 </div>
               </div>
