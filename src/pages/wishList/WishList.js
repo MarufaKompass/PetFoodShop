@@ -40,7 +40,6 @@ export default function WishList() {
       <h2 className="text-3xl font-bold mb-6">My Wishlist ({products.length} items)</h2>
 
       <div className="flex flex-col gap-8">
-        {/* Wishlist Items */}
         {products.map((product) => (
           <div key={product.id} className="flex items-center space-x-4 border-b py-4">
             <img
