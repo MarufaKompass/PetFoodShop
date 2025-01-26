@@ -6,6 +6,7 @@ import Cart from "../pages/cart/Cart";
 import WishList from "../pages/wishList/WishList";
 import Contact from "../pages/contact/Contact";
 import ProductByCategories from "../pages/productByCategories/ProductByCategories";
+import ProductDetails from "../pages/shop/productDetails/ProductDetails";
 
 const shopSubMenu = [
   { path: "/shop/dogs", label: "Dogs", element: <ProductByCategories /> },
@@ -78,6 +79,16 @@ const routes = [
         <WishList />
       </Suspense>
     ),
+
+  },
+  {
+    path: '/productDetails',
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <ProductDetails />
+      </Suspense>
+    ),
+
   },
 ];
 

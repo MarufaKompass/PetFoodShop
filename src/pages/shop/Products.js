@@ -2,12 +2,14 @@ import React from "react";
 import TwoGrid from "../../components/svg/TwoGrid";
 import FourGrid from "../../components/svg/FourGrid";
 import Product from "./Product";
+import ProductCategoriesFilter from "./ProductCategoriesFilter";
 import cart1 from "../../assets/products/product-01.jpg";
 import cart2 from "../../assets/products/product-02.jpg";
 import cart3 from "../../assets/products/product-03.jpg";
 import cart4 from "../../assets/products/product-04.jpg";
 import cart5 from "../../assets/products/product-05.jpg";
 import cart6 from "../../assets/products/product-06.jpg";
+
 
 export default function Products() {
   
@@ -320,8 +322,13 @@ export default function Products() {
   ];
 
   return (
-    <div className="container py-24">
-      <div class="grid grid-cols-4 gap-20">
+    <div className="container pb-24 pt-14">
+      <div class="grid grid-cols-4 gap-4">
+       
+        <div>
+          <ProductCategoriesFilter></ProductCategoriesFilter>
+        </div>
+
         <div class="col-span-3 ...">
           <div className="flex justify-between">
             <p>Showing 13-14 of 28 results</p>
@@ -331,13 +338,12 @@ export default function Products() {
             </div>
           </div>
 
-          <div  className="grid  grid-cols-1  xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8   px-8 xs:px-0 my-20">
-            {products.map((product) => (
-              <Product key={product.id} product={product}></Product>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
+    </div>
         </div>
-        <div class="...">Price filter</div>
       </div>
     </div>
   );

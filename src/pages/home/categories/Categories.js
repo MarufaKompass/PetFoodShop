@@ -101,7 +101,7 @@ export default function Categories() {
           Shop by Category
         </h2>
 
-        <Swiper
+        {/* <Swiper
           spaceBetween={30}
           slidesPerView={6}
           navigation={true}
@@ -140,7 +140,58 @@ export default function Categories() {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+        <Swiper
+  spaceBetween={30}
+  slidesPerView={6}
+  navigation={true}
+  freeMode={true}
+  pagination={{
+    clickable: true,
+  }}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }}
+  modules={[Autoplay, FreeMode, Navigation]}
+  className="mySwiper"
+>
+  {categories.map((category) => {
+    // Generate a random background color
+    const randomBgColor = `#${Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, '#003039 ')}`;
+
+    return (
+      <SwiperSlide key={category.id}>
+        <div className="w-48 cursor-pointer">
+          <div
+            className="flex items-center justify-center rounded-tl-[100px] rounded-tr-[10px] rounded-br-[100px] rounded-bl-[100px] w-48 h-48 shadow-md p-4"
+            style={{ backgroundColor: randomBgColor }} // Set random background color
+          >
+            <img
+              src={category.image}
+              alt={category.title}
+              className="rounded-full w-32 h-32 flex justify-center items-center"
+            />
+          </div>
+
+          <div className="flex justify-center mt-3">
+            <div>
+              <h3 className="font-lato font-bold text-[18px] text-heading text-center">
+                {category.title}
+              </h3>
+              <span className="font-lato font-medium text-textCategory text-gray flex justify-center">
+                {category.category}
+              </span>
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+    );
+  })}
+</Swiper>
+
       </div>
     </div>
   );

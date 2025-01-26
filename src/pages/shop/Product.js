@@ -13,11 +13,11 @@ export default function Product({ product }) {
         >
           <div className="relative">
             <img
-              src={product.image}
-              alt={product.name}
+              src={product?.image}
+              alt={product?.name}
               className="w-full h-[12.4rem] pt-[10px] px-[4px]"
             />
-            {product.isHotSell && (
+            {product?.isHotSell && (
               <div
                 variant="destructive"
                 className="absolute top-2 left-2 flex items-center text-[#fff] badge bg-badgeHot px-3 py-3 font-bold text-leto text-[12px]"
@@ -26,7 +26,7 @@ export default function Product({ product }) {
                 Hot Sell
               </div>
             )}
-            {product.isNew && (
+            {product?.isNew && (
               <div
                 variant="destructive"
                 className="absolute top-2 left-2 flex items-center text-[#fff] badge bg-badgeGreen px-3 py-3 font-bold text-leto text-[12px]"
