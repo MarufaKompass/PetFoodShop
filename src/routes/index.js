@@ -4,6 +4,7 @@ import About from '../pages/about/About';
 import Products from '../pages/shop/Products';
 import Cart from '../pages/cart/Cart';
 import WishList from '../pages/wishList/WishList';
+import ProductDetails from '../pages/shop/productDetails/ProductDetails';
 
 const routes= [
   {
@@ -57,6 +58,15 @@ const routes= [
     element: (
       <Suspense fallback={<p>Loading...</p>}>
         <WishList />
+      </Suspense>
+    ),
+
+  },
+  {
+    path: '/productDetails',
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <ProductDetails />
       </Suspense>
     ),
 

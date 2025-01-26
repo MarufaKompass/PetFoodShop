@@ -59,8 +59,6 @@ export default function ShortListedProduct() {
       inStock: false,
       image: product3,
     },
- 
-   
   ];
 
   return (
@@ -71,42 +69,39 @@ export default function ShortListedProduct() {
 
       <div>
         {products.map((product) => (
-          <div
-            key={product.id}
-            className='flex gap-4 mb-3 pl-1'
-          >
+          <div key={product.id} className="flex gap-4 mb-3 pl-1">
             <div className="border border-[#f1f1f1] flex items-center justify-center rounded-[10px] px-2 py-2">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-[70px], h-[70px]"
-            />
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-[70px], h-[70px]"
+              />
+            </div>
+            <div className="flex items-center">
+              <div>
+                <div className="flex items-center ">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-3 h-3 ${
+                        i < Math.floor(product.rating)
+                          ? "text-yellow-400 fill-current"
+                          : "text-gray-300"
+                      }`}
+                    />
+                  ))}
+                  <span className="font-lato font-medium text-textCategory text-gray pb-1">
+                    ({product.rating.toFixed(1)})
+                  </span>
                 </div>
-    <div className="flex items-center">
-    <div>
-       
-       
-           
-            <div className="flex items-center ">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-3 h-3 ${
-                      i < Math.floor(product.rating)
-                        ? "text-yellow-400 fill-current"
-                        : "text-gray-300"
-                    }`}
-                  />
-                ))}
-                <span className="font-lato font-medium text-textCategory text-gray pb-1">
-                   ({product.rating.toFixed(1)})
-                </span>
+                <h2 className="font-lato text-[16px] font-bold text-heading">
+                  {product.name}
+                </h2>
+                <p className="font-lato font-bold  text-heading  text-[15px] pt-[4px]">
+                  {product.price} BDT
+                </p>
               </div>
-              <h2 className="font-lato text-[16px] font-bold text-heading">{product.name}</h2>
-              <p className="font-lato font-bold  text-heading  text-[15px] pt-[4px]" >{product.price} BDT</p>
-          
-          </div>
-    </div>
+            </div>
           </div>
         ))}
       </div>
