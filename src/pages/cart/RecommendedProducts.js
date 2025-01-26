@@ -24,7 +24,7 @@ export default function RecommendedProducts() {
   return (
     <div>
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold mb-4  font-lato text-[18px] font-bold text-heading">Recommended Products</h2>
+        <h2 className="text-xl  mb-4  font-lato text-[18px] font-bold text-heading">Recommended Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {recommendedProducts.map((product) => (
             <div key={product.id} className="card bg-base-100 shadow-xl">

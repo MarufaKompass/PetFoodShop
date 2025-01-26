@@ -106,21 +106,49 @@ export default function Cart() {
           {/* Order Summary */}
           <div className="lg:w-1/3">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
+              <h2 className=" mb-4 font-lato text-[18px] font-bold text-heading">Order Summary</h2>
               <div className="flex justify-between mb-2">
                 <span>Subtotal</span>
                 <span>{subtotal.toFixed(2)} ৳</span>
               </div>
               <div className="flex justify-between mb-2">
-                <span>Shipping Charge</span>
-                <span>{tax.toFixed(2)} ৳</span>
+                <span className="font-lato text-[14px] font-medium text-heading">Shipping Charge</span>
+                <span className="font-lato text-[14px] font-medium text-heading">{tax.toFixed(2)} ৳</span>
               </div>
              
               <div className="flex justify-between mb-2 border-t border-[#f1f1f1] py-3">
-                <span className="font-semibold">Total</span>
-                <span className="font-semibold">{total.toFixed(2)} ৳</span>
+                <span className="font-lato text-[15px] font-bold text-heading">Total</span>
+                <span className="font-lato text-[15px] font-bold text-heading">{total.toFixed(2)} ৳</span>
               </div>
-              <button className="btn bg-primary text-white     hover:bg-[#ce823b] rounded-none  btn-block mt-4 flex items-center justify-center  font-lato text-[16px]">
+
+              <div className="form-control mt-4">
+                  <label className="label">
+                    <span className=" font-lato text-[14px] font-bold text-heading">Coupon Code</span>
+                  </label>
+                  <div className="flex gap-3">
+                    <input type="text" placeholder="Enter code" className="input input-bordered flex-grow rounded-none focus:outline-none" />
+                  <div>
+                  <button className="btn rounded-none bg-primary text-white hover:bg-[#ce823b] font-lato text-[14px]">Add Coupon</button>
+                  </div>
+                  </div>
+                </div>
+                <div className="form-control mt-4">
+                  <label className="label">
+                    <span className="font-lato text-[14px] font-bold text-heading">Shipping Method</span>
+                  </label>
+                  <select className="select select-bordered w-full rounded-none focus:outline-none">
+                    <option disabled selected>
+                      Select shipping method
+                    </option>
+                    <option>Inside Dhaka (60.00 BDT)</option>
+                    <option>Outside Dhaka (150.00 BDT)</option>
+                  </select>
+                </div>
+          
+        
+
+              
+              <button className="btn bg-primary text-white hover:bg-[#ce823b] rounded-none  btn-block mt-4 flex items-center justify-center  font-lato text-[16px]">
                 Proceed to Checkout <ArrowRight size={16} className="ml-2" />
               </button>
             </div>
