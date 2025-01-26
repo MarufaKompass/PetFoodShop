@@ -37,7 +37,7 @@ export default function ProductCategoriesFilter() {
           {items.map((item, index) => (
             <div key={index} className="flex items-center mb-2 cursor-pointer">
               <input type="checkbox" id={`${section}-${index}`} className="mr-2 cursor-pointer" />
-              <label htmlFor={`${section}-${index}`} className="text-textTitle text-gray font-[500] cursor-pointer">
+              <label htmlFor={`${section}-${index}`} className="text-textTitle text-gray font-[500] cursor-pointer font-lato text-[14px]  ">
                 {item}
               </label>
             </div>

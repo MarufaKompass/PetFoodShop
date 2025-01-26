@@ -126,7 +126,7 @@ export default function Cart() {
                     <span className=" font-lato text-[14px] font-bold text-heading">Coupon Code</span>
                   </label>
                   <div className="flex gap-3">
-                    <input type="text" placeholder="Enter code" className="input input-bordered flex-grow rounded-none focus:outline-none" />
+                    <input type="text" placeholder="Enter code" className="input input-bordered flex-grow rounded-none focus:outline-none border-[#f1f1f1]" />
                   <div>
                   <button className="btn rounded-none bg-primary text-white hover:bg-[#ce823b] font-lato text-[14px]">Add Coupon</button>
                   </div>
@@ -136,7 +136,7 @@ export default function Cart() {
                   <label className="label">
                     <span className="font-lato text-[14px] font-bold text-heading">Shipping Method</span>
                   </label>
-                  <select className="select select-bordered w-full rounded-none focus:outline-none">
+                  <select className="select select-bordered w-full rounded-none focus:outline-none border-[#f1f1f1]">
                     <option disabled selected>
                       Select shipping method
                     </option>
