@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import product01 from "../../../assets/products/product-01.jpg";
-import product02 from "../../../assets/products/product-02.jpg";
-import product03 from "../../../assets/products/product-03.jpg";
-import product04 from "../../../assets/products/product-04.jpg";
 
 export default function AdditionalInformation() {
   const [activeTab, setActiveTab] = useState("description");
