@@ -1,11 +1,20 @@
-import React from "react";
+import React , {useState} from "react";
 import { Link } from "react-router-dom";
 import NavbarList from "./NavBarList";
 import logo from "../../assets/logo/logo.png";
 import CartIcon from "../svg/Cart";
 import WishList from "../svg/WishList";
 import User from "../svg/User";
+import SideCartInfo from "./SideCartInfo";
 export default function Header() {
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+
   return (
     <div>
       <div className="container ">
@@ -65,8 +74,12 @@ export default function Header() {
             </li>
           </ul>
         </div> */}
-            <div className="rounded-full p-[10px] bg-[#0c318e]">
+         <div className="relative">
+
+            <div className="rounded-full p-[10px] bg-[#0c318e] cursor-pointer" onClick={toggleSidebar}>
               <User></User>
+            </div>
+           <SideCartInfo isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar }></SideCartInfo>
             </div>
           </div>
         </div>
