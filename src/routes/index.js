@@ -5,15 +5,16 @@ import Products from "../pages/shop/Products";
 import Cart from "../pages/cart/Cart";
 import WishList from "../pages/wishList/WishList";
 import Contact from "../pages/contact/Contact";
+import CheckOut from "../pages/checkout/CheckOut";
 import ProductByCategories from "../pages/productByCategories/ProductByCategories";
 import ProductDetails from "../pages/shop/productDetails/ProductDetails";
 
-const shopSubMenu = [
-  { path: "/shop/dogs", label: "Dogs", element: <ProductByCategories /> },
-  { path: "/shop/cats", label: "Cats", element: <ProductByCategories /> },
-  { path: "/shop/fish", label: "Fish", element: <ProductByCategories /> },
-  { path: "/shop/birds", label: "Birds", element: <ProductByCategories /> },
-];
+// const shopSubMenu = [
+//   { path: "/shop/dogs", label: "Dogs", element: <ProductByCategories /> },
+//   { path: "/shop/cats", label: "Cats", element: <ProductByCategories /> },
+//   { path: "/shop/fish", label: "Fish", element: <ProductByCategories /> },
+//   { path: "/shop/birds", label: "Birds", element: <ProductByCategories /> },
+// ];
 
 const routes = [
   {
@@ -60,7 +61,28 @@ const routes = [
         <Products />
       </Suspense>
     ),
-    children: shopSubMenu,
+    children: [
+      {
+        path: "shop/dogs",
+        label: "Dogs",
+        element: <ProductByCategories />,
+      },
+      {
+        path: "cats",
+        label: "Cats",
+        element: <ProductByCategories />,
+      },
+      {
+        path: "fish",
+        label: "Fish",
+        element: <ProductByCategories />,
+      },
+      {
+        path: "birds",
+        label: "Birds",
+        element: <ProductByCategories />,
+      },
+    ],
   },
 
   {
@@ -86,6 +108,24 @@ const routes = [
     element: (
       <Suspense fallback={<p>Loading...</p>}>
         <ProductDetails />
+      </Suspense>
+    ),
+
+  },
+  {
+    path: '/checkOut',
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <CheckOut />
+      </Suspense>
+    ),
+
+  },
+  {
+    path: '/productByCategories',
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <ProductByCategories />
       </Suspense>
     ),
 

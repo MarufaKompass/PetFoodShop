@@ -18,7 +18,7 @@ module.exports = {
       },
       colors: {
         gray: "rgb(115, 115, 115)",
-        heading: "#000000",
+        heading: "#161616",
         primary: "#e59142",
         textColor: "#08284a",
         badgeHot: "#FF0000",

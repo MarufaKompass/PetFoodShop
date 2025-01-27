@@ -79,8 +79,12 @@ export default function Background() {
               }`}
               style={{ backgroundImage: `url(${image})` }}
             >
-              <div className="w-2/6 md:h-screen    bg-[rgba(229,145,66,0.6)]   rounded-tr-[70%] rounded-br-[0%] rounded-bl-[0%] rounded-tl-[0%] flex items-center justify-center text-white text-3xl  ">
-                Right Side Content
+              <div className="w-2/6 md:h-screen    bg-primary rounded-tr-[70%] rounded-br-[0%] rounded-bl-[0%] rounded-tl-[0%] flex items-center justify-center text-white text-3xl  ">
+              <div>
+              <h1 className="text-[55px] text-white font-bold leading-[65px] font-lato">Healthier Dog <br></br> Food
+                   A Reality.</h1>
+                   <p className="text-[15px] text-white font-semibold font-lato" >Expertly-crafted reicipes</p>
+                </div>
               </div>
             </div>
           ))}
