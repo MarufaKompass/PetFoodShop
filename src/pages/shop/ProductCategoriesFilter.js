@@ -49,7 +49,7 @@ export default function ProductCategoriesFilter() {
   return (
 <div className="">
 <div className=" p-1 bg-white ">
-      <h2 className="text-2xl font-bold mb-4 text-heading ">Filters</h2>
+      <h2 className="text-2xl font-bold mb-4 text-heading ">Product Filters</h2>
       <FilterSection title="Categories" items={categories} section="categories" />
       <FilterSection title="Price" items={priceRanges} section="price" />
       <FilterSection title="Brands" items={brands} section="brands" />

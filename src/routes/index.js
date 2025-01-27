@@ -64,7 +64,7 @@ const routes = [
     ),
     children: [
       {
-        path: "shop/dogs",
+        path: "/shop/dogs",
         label: "Dogs",
         element: <ProductByCategories />,
       },
