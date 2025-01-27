@@ -6,6 +6,7 @@ import Cart from "../pages/cart/Cart";
 import WishList from "../pages/wishList/WishList";
 import Contact from "../pages/contact/Contact";
 import CheckOut from "../pages/checkout/CheckOut";
+import Error from "../pages/error/Error";
 import ProductByCategories from "../pages/productByCategories/ProductByCategories";
 import ProductDetails from "../pages/shop/productDetails/ProductDetails";
 
@@ -126,6 +127,15 @@ const routes = [
     element: (
       <Suspense fallback={<p>Loading...</p>}>
         <ProductByCategories />
+      </Suspense>
+    ),
+
+  },
+  {
+    path: '*',
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <Error />
       </Suspense>
     ),
 
