@@ -7,6 +7,7 @@ import WishList from "../pages/wishList/WishList";
 import Contact from "../pages/contact/Contact";
 import CheckOut from "../pages/checkout/CheckOut";
 import Error from "../pages/error/Error";
+import Profile from "../pages/profile/Profile";
 import ProductByCategories from "../pages/productByCategories/ProductByCategories";
 import ProductDetails from "../pages/shop/productDetails/ProductDetails";
 
@@ -136,6 +137,15 @@ const routes = [
     element: (
       <Suspense fallback={<p>Loading...</p>}>
         <Error />
+      </Suspense>
+    ),
+
+  },
+  {
+    path: '/profile',
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <Profile />
       </Suspense>
     ),
 
