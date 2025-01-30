@@ -8,14 +8,14 @@ export default function CheckOut() {
   return (
     <div className="min-h-screen bg-base-200 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-extrabold text-base-content mb-8 text-left">
+        <h1 className="text-[40px] font-extrabold text-base-content mb-8 text-left">
           Checkout
         </h1>
         <div className="bg-base-100 shadow-xl rounded-box">
           <div className="lg:grid lg:grid-cols-2 lg:gap-x-8 lg:p-8">
             {/* Shipping Information */}
             <div className="space-y-6 sm:space-y-5">
-              <h2 className="text-2xl font-semibold text-base-content text-heading text-lato font-bold text-[24px]">
+              <h2 className="text-2xl font-semibold text-heading text-lato  text-[24px]">
                 Shipping Information
               </h2>
               <div className="space-y-4">

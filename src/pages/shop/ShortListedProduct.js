@@ -98,7 +98,7 @@ export default function ShortListedProduct() {
                   {product.name}
                 </h2>
                 <p className="font-lato font-bold  text-heading  text-[15px] pt-[4px]">
-                  {product.price} BDT
+                  {product.price} ৳
                 </p>
               </div>
             </div>

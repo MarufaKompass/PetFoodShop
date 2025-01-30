@@ -4,7 +4,7 @@ import ShortListedProduct from "./ShortListedProduct";
 export default function ProductCategoriesFilter() {
     const categories = ["Dry Food", "Wet Food", "Treats", "Supplements","Beds","Bowls","Clothing", "Flea & Tick", "Pharmacy", "Treats"
  ]
-    const priceRanges = ["Under 500 BDT", "1000 BDT - 2000 BDT", "2000 BDT - 4000 BDT", "Over 5000 BDT"]
+    const priceRanges = ["Under 500 ৳", "1000 ৳ - 2000 ৳", "2000 ৳ - 4000 ৳", "Over 5000 ৳"]
     const brands = ["Royal Canin", "Purina", "Hill's Science Diet", "Blue Buffalo", "Iams"]
     const lastProducts = ["New Arrivals", "Best Sellers", "On Sale"]
 

@@ -140,8 +140,8 @@ export default function Cart() {
                     <option disabled selected>
                       Select shipping method
                     </option>
-                    <option>Inside Dhaka (60.00 BDT)</option>
-                    <option>Outside Dhaka (150.00 BDT)</option>
+                    <option>Inside Dhaka (60.00 ৳)</option>
+                    <option>Outside Dhaka (150.00 ৳)</option>
                   </select>
                 </div>
           

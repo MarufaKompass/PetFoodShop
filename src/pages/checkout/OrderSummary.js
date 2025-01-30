@@ -35,7 +35,7 @@ export default function OrderSummary() {
                     </p>
                   </div>
                   <p className="mt-1 text-[16px] font-medium text-base-content text-lato text-heading flex items-center">
-                    590.99 BDT
+                    590.99 ৳
                   </p>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function OrderSummary() {
                     </p>
                   </div>
                   <p className="mt-1 text-[16px] font-medium text-base-content text-lato text-heading flex items-center">
-                    590.99 BDT
+                    590.99 ৳
                   </p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function OrderSummary() {
                 Subtotal
               </dt>
               <dd className="text-sm font-medium text-base-content">
-                590.99 BDT
+                590.99 ৳
               </dd>
             </div>
             <div className="flex items-center justify-between">
@@ -82,7 +82,7 @@ export default function OrderSummary() {
                 Shipping
               </dt>
               <dd className="text-sm font-medium text-base-content">
-                50.00 BDT
+                50.00 ৳
               </dd>
             </div>
 
@@ -91,7 +91,7 @@ export default function OrderSummary() {
                 Total
               </dt>
               <dd className="text-base  text-lato text-heading font-bold">
-                640.99 BDT
+                640.99 ৳
               </dd>
             </div>
           </dl>

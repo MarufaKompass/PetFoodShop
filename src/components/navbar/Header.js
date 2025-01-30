@@ -30,14 +30,14 @@ export default function Header() {
           </div>
 
           <div className="navbar-end flex gap-3">
-            <Link to="/cart" className="relative">
+            <div className="relative" onClick={toggleSidebar}>
               <div className=" rounded-full p-[10px] bg-[#0c318e]">
                 <CartIcon></CartIcon>
                 <div className="w-6 h-6 bg-[#e59142] text-[#fff] text-lato font-bold rounded-[50%] absolute bottom-8 left-7 flex items-center justify-center">
-                  <span className="text-[13px]">0</span>
+                  <span className="text-[13px]">2</span>
                 </div>
               </div>
-            </Link>
+            </div>
 
             <Link to="/wishList" className="relative ">
               <div className=" rounded-full p-[10px] bg-[#0c318e]">
@@ -76,7 +76,7 @@ export default function Header() {
         </div> */}
          <div className="relative">
 
-            <div className="rounded-full p-[10px] bg-[#0c318e] cursor-pointer" onClick={toggleSidebar}>
+            <div className="rounded-full p-[10px] bg-[#0c318e] cursor-pointer" >
               <User></User>
             </div>
            <SideCartInfo isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar }></SideCartInfo>

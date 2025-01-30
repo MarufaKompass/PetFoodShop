@@ -36,7 +36,7 @@ export default function RelatedProducts() {
                       {product.name}
                     </h4>
                     <p className="font-lato font-medium  text-semibold  text-[15px] ">
-                      {product.price} BDT
+                      {product.price} ৳
                     </p>
                     <button className="mt-4 w-full bg-gray-800 text-heading py-2 px-4 rounded-full font-bold hover:bg-gray-700 transition duration-200 border border-[#f1f1f1] rounded-none">
                       Add to Cart

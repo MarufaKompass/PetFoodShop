@@ -78,7 +78,7 @@ export default function ProductDetails() {
                   </span>
                   <span className="font-lato font-semibold  text-heading  text-[15px]">
                     {" "}
-                    {product.price} BDT
+                    {product.price} ৳
                   </span>
                 </div>
                 <div>
