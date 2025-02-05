@@ -36,12 +36,12 @@ export default function WishList() {
   ];
 
   return (
-    <main className="flex-grow container mx-auto px-4 py-8">
+    <main className="flex-grow container mx-auto px-24 py-20">
       <h2 className="text-3xl font-bold mb-6">My Wishlist ({products.length} items)</h2>
 
       <div className="flex flex-col gap-8">
         {products.map((product) => (
-          <div key={product.id} className="flex items-center space-x-4 border-b py-4">
+          <div key={product.id} className="flex items-center space-x-4 border-b py-4 border-[#f1f1f1]">
             <img
               src={product.image}
               alt={product.name}
@@ -54,8 +54,8 @@ export default function WishList() {
                 <span className="text-2xl font-bold text-primary">${product.price}</span>
               </div>
             </div>
-            <div className="flex flex-col items-end space-y-2">
-              <button className="btn btn-primary btn-sm">Add to Cart</button>
+            <div className="flex flex-col items-end space-y-3">
+              <button className="px-6 py-2 bg-primary rounded-none font-lato text-[14px] font-bold text-white cursor-pointer">Add to Cart</button>
               <button className="btn btn-ghost btn-sm text-red-500">
                 <Trash2 className="h-4 w-4 mr-1" /> Remove
               </button>
