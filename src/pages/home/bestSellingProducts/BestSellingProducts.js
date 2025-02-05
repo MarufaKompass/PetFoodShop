@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Star from "../../../components/svg/Star";
 import Cart from "../../../components/svg/Cart";
 import bestProduct01 from "../../../assets/products/product-01.jpg";
@@ -7,6 +8,7 @@ import bestProduct03 from "../../../assets/products/product-03.jpg";
 import bestProduct04 from "../../../assets/products/product-04.jpg";
 import bestProduct05 from "../../../assets/products/product-05.jpg";
 import bestProduct06 from "../../../assets/products/product-06.jpg";
+
 export default function BestSellingProducts() {
   const products = [
     {
@@ -103,46 +105,72 @@ export default function BestSellingProducts() {
 
   return (
     <section className="container mx-auto px-4 py-16">
-      <div className="mb-[30px]">
-        {/* <h1 className=" font-lato text-[28px] md:text-[42px] font-[700] text-heading  border-b border-[#f1f1f1] pb-[30px] ">
-          Best Selling Products 
-          </h1> */}
-      </div>
+      <div className="mb-[30px]"></div>
       <div className="tabs tabs-boxed justify-center mb-8 border-b border-[#f1f1f1] pb-[30px] ">
-        <a
-          className={`tab ${activeTab === "best-selling" ?  "tab-active" : ""}`}
+
+        <div
+          className={`tab ${activeTab === "best-selling" ? "tab-active" : ""}`}
           onClick={() => setActiveTab("best-selling")}
         >
-          <p  className={`tab ${activeTab === "best-selling" ?  " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase" : " uppercase  text-[18px] font-bold text-heading"}`} > Best Selling</p>
+          <p
+            className={`tab ${
+              activeTab === "best-selling"
+                ? " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase"
+                : " uppercase  text-[18px] font-bold text-heading"
+            }`}
+          >
+            {" "}
+            Best Selling
+          </p>
+        </div>
 
-        </a>
 
 
-
-        
-        <a
-          className={`tab ${activeTab === "featured-product" ? "tab-active" : ""
+        <div
+          className={`tab ${
+            activeTab === "featured-product" ? "tab-active" : ""
           }`}
           onClick={() => setActiveTab("featured-product")}
         >
-          
-          <p  className={`tab ${activeTab === "featured-product" ?  " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase" : " uppercase  text-[18px] font-bold text-heading"}`}>Featured Product</p>
-
-        </a>
-        <a
+          <p
+            className={`tab ${
+              activeTab === "featured-product"
+                ? " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase"
+                : " uppercase  text-[18px] font-bold text-heading"
+            }`}
+          >
+            Featured Product
+          </p>
+        </div>
+        <div
           className={`tab ${activeTab === "on-sale" ? "tab-active" : ""}`}
           onClick={() => setActiveTab("on-sale")}
         >
-                 <p  className={`tab ${activeTab === "on-sale" ?  " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase" : " uppercase  text-[18px] font-bold text-heading"}`}> On Sale</p>
-         
-        </a>
-        <a
+          <p
+            className={`tab ${
+              activeTab === "on-sale"
+                ? " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase"
+                : " uppercase  text-[18px] font-bold text-heading"
+            }`}
+          >
+            {" "}
+            On Sale
+          </p>
+        </div>
+        <div
           className={`tab ${activeTab === "new-product" ? "tab-active" : ""}`}
           onClick={() => setActiveTab("new-product")}
         >
-                 <p  className={`tab ${activeTab === "new-product" ?  " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase" : " uppercase  text-[18px] font-bold text-heading"}`}>New Product</p>
-       
-        </a>
+          <p
+            className={`tab ${
+              activeTab === "new-product"
+                ? " text-[#e59142] font-lato rounded-none  text-[20px] font-bold uppercase"
+                : " uppercase  text-[18px] font-bold text-heading"
+            }`}
+          >
+            New Product
+          </p>
+        </div>
       </div>
       <div className="grid  grid-cols-1  xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8   px-8 xs:px-0">
         {filteredProducts.map((product) => (
@@ -161,7 +189,6 @@ export default function BestSellingProducts() {
                   variant="destructive"
                   className="absolute top-2 left-2 flex items-center text-[#fff] badge bg-badgeHot px-3 py-3 font-bold text-leto text-[12px]"
                 >
-             
                   Hot Sell
                 </div>
               )}
@@ -170,7 +197,6 @@ export default function BestSellingProducts() {
                   variant="destructive"
                   className="absolute top-2 left-2 flex items-center text-[#fff] badge bg-badgeGreen px-3 py-3 font-bold text-leto text-[12px]"
                 >
-             
                   New
                 </div>
               )}
@@ -203,7 +229,6 @@ export default function BestSellingProducts() {
                 </span>
                 <button variant="outline" size="sm" className="flex gap-1">
                   <Cart />
-            
                 </button>
               </div>
             </div>

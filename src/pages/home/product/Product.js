@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Star from "../../../components/svg/Star";
 import Cart from "../../../components/svg/Cart";
 import RightArrow from "../../../components/svg/RightArrow";
@@ -8,6 +9,7 @@ import bestProduct03 from "../../../assets/products/product-03.jpg";
 import bestProduct04 from "../../../assets/products/product-04.jpg";
 import bestProduct05 from "../../../assets/products/product-05.jpg";
 import bestProduct06 from "../../../assets/products/product-06.jpg";
+
 export default function Product() {
   const products = [
     {
@@ -59,37 +61,37 @@ export default function Product() {
       image: bestProduct06,
     },
     {
-        id: 7,
-        name: "Bird Cage Swing",
-        category: "Toys",
-        price: 14.99,
-        rating: 4.5,
-        image: bestProduct01,
-      },
-      {
-        id: 8,
-        name: "Pet Grooming Brush",
-        category: "Grooming",
-        price: 12.99,
-        rating: 4.7,
-        image: bestProduct02,
-      },
-      {
-        id: 9,
-        name: "Cat Scratching Post",
-        category: "Furniture",
-        price: 29.99,
-        rating: 4.6,
-        image: bestProduct03,
-      },
-      {
-        id: 10,
-        name: "Dog Chew Toy",
-        category: "Toys",
-        price: 9.99,
-        rating: 4.2,
-        image: bestProduct04,
-      },
+      id: 7,
+      name: "Bird Cage Swing",
+      category: "Toys",
+      price: 14.99,
+      rating: 4.5,
+      image: bestProduct01,
+    },
+    {
+      id: 8,
+      name: "Pet Grooming Brush",
+      category: "Grooming",
+      price: 12.99,
+      rating: 4.7,
+      image: bestProduct02,
+    },
+    {
+      id: 9,
+      name: "Cat Scratching Post",
+      category: "Furniture",
+      price: 29.99,
+      rating: 4.6,
+      image: bestProduct03,
+    },
+    {
+      id: 10,
+      name: "Dog Chew Toy",
+      category: "Toys",
+      price: 9.99,
+      rating: 4.2,
+      image: bestProduct04,
+    },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -103,13 +105,13 @@ export default function Product() {
     <section className="container mx-auto px-4 py-16">
       <div className="mb-[30px] flex justify-between border-b border-[#f1f1f1] pb-[30px] ">
         <h1 className=" font-lato text-[28px] md:text-[42px] font-[700] text-heading   pb-[30px] ">
-         Products
+          Products
         </h1>
-      <button >
-      <p className=" font-lato text-[28px] md:text-[18px] font-[700]   flex items-center text-[#e59142]">
+        <button>
+          <p className=" font-lato text-[28px] md:text-[18px] font-[700]   flex items-center text-[#e59142]">
             See More <RightArrow></RightArrow>
-        </p>
-      </button>
+          </p>
+        </button>
       </div>
       <div className="flex justify-end mb-6">
         <select
@@ -168,7 +170,6 @@ export default function Product() {
                   variant="destructive"
                   className="absolute top-2 left-2 flex items-center text-[#fff] badge bg-badgeHot px-3 py-3 font-bold text-leto text-[12px]"
                 >
-                  {/* <Flame className="w-4 h-4 mr-1" /> */}
                   Hot Sell
                 </div>
               )}
@@ -177,7 +178,6 @@ export default function Product() {
                   variant="destructive"
                   className="absolute top-2 left-2 flex items-center text-[#fff] badge bg-badgeGreen px-3 py-3 font-bold text-leto text-[12px]"
                 >
-                  {/* <Flame className="w-4 h-4 mr-1" /> */}
                   New
                 </div>
               )}
@@ -210,7 +210,6 @@ export default function Product() {
                 </span>
                 <button variant="outline" size="sm" className="flex gap-1">
                   <Cart />
-                  {/* <p>Add to Cart</p> */}
                 </button>
               </div>
             </div>

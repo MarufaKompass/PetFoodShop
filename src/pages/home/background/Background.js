@@ -26,16 +26,16 @@ export default function Background() {
 
    
     if (diff > 50) {
-      nextSlide(); // Swipe left
+      nextSlide();
       setIsDragging(false);
     } else if (diff < -50) {
-      prevSlide(); // Swipe right
+      prevSlide(); 
       setIsDragging(false);
     }
   };
 
   const handleTouchEnd = () => {
-    setIsDragging(false); // End dragging state
+    setIsDragging(false); 
   };
 
   const nextSlide = () => {

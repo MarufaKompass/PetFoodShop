@@ -7,7 +7,7 @@ export default function NavbarList() {
   const [showSubMenu, setShowSubMenu] = useState(false);
 
   const shopRoute = routes.find((route) => route.path === "/shop");
-  console.log("shopRoute", shopRoute);
+
 
   return (
     <div>
