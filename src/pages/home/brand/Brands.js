@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import "./styles.css";
 import { Autoplay ,FreeMode, Pagination } from "swiper/modules";
 
+import "./styles.css";
 import Boninie from "../../../assets/banners/Boninie.jpg";
 import Drools from "../../../assets/banners/Drools.jpg";
 import Jungle from "../../../assets/banners/Jungle.jpg";
@@ -41,7 +41,7 @@ export default function Brands() {
     <div className="container">
       <div>
         <h1 className="font-lato text-[28px] md:text-[42px] font-[700] text-heading pb-[20px] border-b border-[#f1f1f1] mb-[10px]">
-          Brands
+        Feature Brands
         </h1>
       </div>
       <div>
