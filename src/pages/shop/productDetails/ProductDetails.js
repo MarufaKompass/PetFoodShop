@@ -37,12 +37,14 @@ export default function ProductDetails() {
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="lg:w-1/2">
               <div className="relative aspect-square mb-4 flex justify-center items-center border border-[#f1f1f1]">
+                
                 <img
                   src={product.images[currentImageIndex]}
                   alt={`${product.name} - Image ${currentImageIndex + 1}`}
                   layout="fill"
                   objectFit="fit"
                 />
+
               </div>
               <div className="flex gap-4 space-x-2 overflow-x-auto py-4 px-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
                 {product.images.map((image, index) => (
@@ -159,12 +161,12 @@ export default function ProductDetails() {
               </div>
               <div className="flex mb-4">
                 <div className="w-1/2 px-2">
-                  <button className="w-full w-full bg-primary hover:text-heading text-white text-[15px] py-2 px-4 font-semibold hover:bg-white  transition duration-200  hover:border hover:border-[#f1f1f1] font-lato">
+                  <button className="w-full bg-primary hover:text-heading text-white text-[15px] py-2 px-4 font-semibold hover:bg-white  transition duration-200  hover:border hover:border-[#f1f1f1] font-lato">
                     Add to Cart
                   </button>
                 </div>
                 <div className="w-1/2 px-2">
-                  <button className="w-full w-full bg-primary hover:text-heading text-white text-[15px] py-2 px-4 font-semibold hover:bg-white  transition duration-200  hover:border hover:border-[#f1f1f1] font-lato">
+                  <button className="w-full  bg-primary hover:text-heading text-white text-[15px] py-2 px-4 font-semibold hover:bg-white  transition duration-200  hover:border hover:border-[#f1f1f1] font-lato">
                     Add to Wishlist
                   </button>
                 </div>

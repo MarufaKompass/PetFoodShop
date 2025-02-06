@@ -7,6 +7,8 @@ import FastDeliveryProcess from "./fastDelivery/FastDeliveryProcess";
 import SomeImages from "./someImages/SomeImages";
 import Banners from "./banners/Banners";
 import Product from "./product/Product";
+import BannerTwo from "./banners/BannerTwo";
+import Brands from "./brand/Brands";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Product></Product>
       <Banners></Banners>
       <BestSellingProducts></BestSellingProducts>
+      <BannerTwo></BannerTwo>
+      <Brands></Brands>
       <FastDeliveryProcess></FastDeliveryProcess>
       <SomeImages></SomeImages>
     </div>
