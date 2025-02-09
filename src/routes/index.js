@@ -33,24 +33,24 @@ const routes = [
   //     </Suspense>
   //   ),
   // },
-  {
-    path: "/about",
-    label: "About",
-    element: (
-      <Suspense fallback={<p>Loading...</p>}>
-        <About />
-      </Suspense>
-    ),
-  },
   // {
-  //   path: "/contact",
+  //   path: "/about",
   //   label: "About",
   //   element: (
   //     <Suspense fallback={<p>Loading...</p>}>
-  //       <Contact />
+  //       <About />
   //     </Suspense>
   //   ),
   // },
+  {
+    path: "/contact",
+    label: "About",
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <Contact />
+      </Suspense>
+    ),
+  },
 
   {
     path: "/cats-accessories",
