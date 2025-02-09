@@ -42,7 +42,7 @@ export default function Header() {
             <div className="relative" onClick={toggleSidebar}>
               <div className=" rounded-full p-[10px] bg-[#0c318e]">
                 <CartIcon></CartIcon>
-                <div className="w-6 h-6 bg-[#e59142] text-[#fff] text-lato font-bold rounded-[50%] absolute bottom-8 left-7 flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#e59142] text-[#fff] text-lato font-bold rounded-[50%] absolute bottom-12 left-7 flex items-center justify-center">
                   <span className="text-[13px]">2</span>
                 </div>
               </div>
@@ -51,7 +51,7 @@ export default function Header() {
             <Link to="/wishList" className="relative ">
               <div className=" rounded-full p-[10px] bg-[#0c318e]">
                 <WishList></WishList>
-                <div className="w-6 h-6 bg-[#e59142] text-[#fff] text-lato font-bold rounded-[50%] absolute bottom-8 left-7 flex items-center justify-center">
+                <div className="w-6 h-6 bg-[#e59142] text-[#fff] text-lato font-bold rounded-[50%] absolute bottom-12 left-7 flex items-center justify-center">
                   <span className="text-[13px]">3</span>
                 </div>
               </div>
