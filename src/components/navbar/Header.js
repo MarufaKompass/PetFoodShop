@@ -18,18 +18,27 @@ export default function Header() {
   return (
     <div>
       <div className="container ">
-        <div className="navbar bg-white py-8">
-          <div className="navbar-start">
+        <div className="grid grid-cols-3 bg-white py-8">
+
+          
+          <div className="">
             <Link to="/" className="btn btn-ghost normal-case text-xl">
               <img src={logo} alt="Logo" width={80} height={80} />
             </Link>
           </div>
 
-          <div className="navbar-middle">
+
+
+
+          <div className="flex items-center ">
             <NavbarList></NavbarList>
           </div>
 
-          <div className="navbar-end flex gap-3">
+
+
+
+
+          <div className=" flex justify-end flex gap-3">
             <div className="relative" onClick={toggleSidebar}>
               <div className=" rounded-full p-[10px] bg-[#0c318e]">
                 <CartIcon></CartIcon>
@@ -79,7 +88,7 @@ export default function Header() {
             <div className="rounded-full p-[10px] bg-[#0c318e] cursor-pointer" >
               <User></User>
             </div>
-           <SideCartInfo isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar }></SideCartInfo>
+               <SideCartInfo isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar }></SideCartInfo>
             </div>
           </div>
         </div>

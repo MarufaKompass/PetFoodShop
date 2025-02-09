@@ -15,7 +15,7 @@ export default function BottomFooter() {
             className="mr-2"
           />
           <span className="font-lato font-semibold text-[14px] text-footerText">
-            © 2023 Paw-some Pet Foods. All rights reserved.
+            © 2025 Paw-some Pet Foods. All rights reserved.
           </span>
         </div>
         <div className="mt-4 md:mt-0">

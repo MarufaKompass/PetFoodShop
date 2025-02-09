@@ -125,10 +125,10 @@ export default function SideCartInfo({ toggleSidebar, isSidebarOpen }) {
                 </span>
               </div>
               <Link to="/checkout">
-                <button className="btn btn-primary btn-block">Checkout</button>
+                <button className="btn btn-primary btn-block" onClick={toggleSidebar}>Checkout</button>
               </Link>
               <Link to="/cart">
-                <button className="btn btn-secondary btn-block mt-3">
+                <button className="btn btn-secondary btn-block mt-3" onClick={toggleSidebar}>
                   View Cart
                 </button>
               </Link>

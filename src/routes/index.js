@@ -10,13 +10,9 @@ import Error from "../pages/error/Error";
 import Profile from "../pages/profile/Profile";
 import ProductByCategories from "../pages/productByCategories/ProductByCategories";
 import ProductDetails from "../pages/shop/productDetails/ProductDetails";
+import CatsProduct from "../pages/catsProduct/CatsProduct";
 
-// const shopSubMenu = [
-//   { path: "/shop/dogs", label: "Dogs", element: <ProductByCategories /> },
-//   { path: "/shop/cats", label: "Cats", element: <ProductByCategories /> },
-//   { path: "/shop/fish", label: "Fish", element: <ProductByCategories /> },
-//   { path: "/shop/birds", label: "Birds", element: <ProductByCategories /> },
-// ];
+
 
 const routes = [
   {
@@ -46,15 +42,41 @@ const routes = [
       </Suspense>
     ),
   },
+  // {
+  //   path: "/contact",
+  //   label: "About",
+  //   element: (
+  //     <Suspense fallback={<p>Loading...</p>}>
+  //       <Contact />
+  //     </Suspense>
+  //   ),
+  // },
+
   {
-    path: "/contact",
-    label: "About",
+    path: "/cats-accessories",
+    label: "Cats",
     element: (
       <Suspense fallback={<p>Loading...</p>}>
-        <Contact />
+        <CatsProduct />
       </Suspense>
     ),
+    children: [
+      {
+        path: "/cats-accessories/dry_food",
+        label: "Cats Dry Foods",
+        element: <ProductByCategories />,
+      },
+      {
+        path: "/cats-accessories/wet_food",
+        label: "Cats Wet Foods",
+        element: <ProductByCategories />,
+      },
+   
+    ],
   },
+
+
+
   {
     path: "/shop",
     label: "Shop",
@@ -70,22 +92,26 @@ const routes = [
         element: <ProductByCategories />,
       },
       {
-        path: "cats",
+        path: "/shop/cats",
         label: "Cats",
         element: <ProductByCategories />,
       },
       {
-        path: "fish",
+        path: "/shop/fish",
         label: "Fish",
         element: <ProductByCategories />,
       },
       {
-        path: "birds",
+        path: "/shop/birds",
         label: "Birds",
         element: <ProductByCategories />,
       },
     ],
   },
+
+
+
+
 
   {
     path: "/cart",
