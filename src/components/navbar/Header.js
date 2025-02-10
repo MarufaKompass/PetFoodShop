@@ -1,15 +1,18 @@
 import React , {useState} from "react";
 import { Link } from "react-router-dom";
 import NavbarList from "./NavBarList";
+import MobileMenu from "./MobileMenu";
 import logo from "../../assets/logo/logo.png";
 import CartIcon from "../svg/Cart";
 import WishList from "../svg/WishList";
 import User from "../svg/User";
 import SideCartInfo from "./SideCartInfo";
+import menuItems from "./menuItems"
+import { Menu, X } from "lucide-react"
 export default function Header() {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -18,7 +21,7 @@ export default function Header() {
   return (
     <div>
       <div className="container ">
-        <div className="grid grid-cols-3 bg-white py-8">
+        <div className="grid grid-cols-3  py-4">
 
           
           <div className="">
@@ -31,9 +34,15 @@ export default function Header() {
 
 
           <div className="flex items-center ">
-            <NavbarList></NavbarList>
-          </div>
+            <NavbarList menuItems={menuItems}></NavbarList>
+          </div> 
+          
+          {/* <div className="md:hidden sm:flex">
+            <MobileMenu menuItems={menuItems} isOpen={isMobileMenuOpen}> </MobileMenu>
+          </div>  */}
 
+
+       
 
 
 
@@ -83,14 +92,38 @@ export default function Header() {
             </li>
           </ul>
         </div> */}
+
+
+       
+
          <div className="relative">
 
             <div className="rounded-full p-[10px] bg-[#0c318e] cursor-pointer" >
               <User></User>
             </div>
+{/* 
+
+            <div className="-mr-2 flex items-center md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            >
+
+              {isMobileMenuOpen ? (
+                <X className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div> */}
+
+
+
                <SideCartInfo isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar }></SideCartInfo>
             </div>
           </div>
+
+          
         </div>
       </div>
     </div>

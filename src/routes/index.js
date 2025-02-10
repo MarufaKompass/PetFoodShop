@@ -14,6 +14,7 @@ import CatsProduct from "../pages/catsProduct/CatsProduct";
 
 
 
+
 const routes = [
   {
     path: "/",
@@ -43,6 +44,15 @@ const routes = [
   //   ),
   // },
   {
+    path: "/product",
+    label: "product",
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <Products />
+      </Suspense>
+    ),
+  },
+  {
     path: "/contact",
     label: "About",
     element: (
@@ -60,53 +70,28 @@ const routes = [
         <CatsProduct />
       </Suspense>
     ),
-    children: [
-      {
-        path: "/cats-accessories/dry_food",
-        label: "Cats Dry Foods",
-        element: <ProductByCategories />,
-      },
-      {
-        path: "/cats-accessories/wet_food",
-        label: "Cats Wet Foods",
-        element: <ProductByCategories />,
-      },
-   
-    ],
+
   },
 
 
 
   {
-    path: "/shop",
-    label: "Shop",
+    path: "categories/dogs",
+    label: "dogsFood",
     element: (
       <Suspense fallback={<p>Loading...</p>}>
-        <Products />
+        <ProductByCategories />
       </Suspense>
     ),
-    children: [
-      {
-        path: "/shop/dogs",
-        label: "Dogs",
-        element: <ProductByCategories />,
-      },
-      {
-        path: "/shop/cats",
-        label: "Cats",
-        element: <ProductByCategories />,
-      },
-      {
-        path: "/shop/fish",
-        label: "Fish",
-        element: <ProductByCategories />,
-      },
-      {
-        path: "/shop/birds",
-        label: "Birds",
-        element: <ProductByCategories />,
-      },
-    ],
+  },
+  {
+    path: "categories/cats",
+    label: "catsFood",
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <ProductByCategories />
+      </Suspense>
+    ),
   },
 
 

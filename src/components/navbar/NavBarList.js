@@ -3,91 +3,55 @@ import { Link } from "react-router-dom";
 import routes from "../../routes";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-export default function NavbarList() {
-  const [showSubMenu, setShowSubMenu] = useState(false);
-  const [showSubMenuCats, setShowSubMenuCats] = useState(false);
+export default function NavbarList({ menuItems }) {
+  console.log("menuItems", menuItems);
 
-  const shopRoute = routes.find((route) => route.path === "/shop" && "/cats-accessories");
-  const shopRouteCats = routes.find((route) => route.path ===  "/cats-accessories");
-
-
+  const [openMenu, setOpenMenu] = useState(null);
   return (
     <div>
-      <ul className="hidden md:flex gap-4">
-        <li className="text-[15px] text-heading font-semibold font-lato">
-          <Link to="/">Home</Link>
-        </li>
-
-        {/* <li className="text-textTitle text-heading font-semibold font-lato">
-          <Link to="/about">About</Link>
-        </li> */}
-
-        <li className="text-[15px] text-heading font-semibold font-lato relative">
-          <div
-            onMouseEnter={() => setShowSubMenuCats(true)}
-            onMouseLeave={() => setShowSubMenuCats(false)}
-          >
-            <div className="flex gap-1">
-              <Link to="/cats-accessories">Cats Food</Link>
-              {showSubMenuCats ? <ChevronUp className="w-[22px] h-[22px]" /> : <ChevronDown className="w-[22px] h-[22px]"/>}
-            </div>
-
-            {shopRouteCats?.children && (
-              <ul
-                className={`absolute -left-6 bg-white shadow-md rounded-md p-2 w-40 z-20 transition-all duration-300 transform ${
-                  showSubMenuCats
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-95 pointer-events-none"
-                }`}
+      <nav className="bg-gray-800 text-black  ">
+        <ul className="flex space-x-6 ">
+          {menuItems.map((item) => (
+            <li
+              key={item.id}
+              className=" relative"
+              onMouseEnter={() => setOpenMenu(item.id)}
+              onMouseLeave={() => setOpenMenu(null)}
+            >
+              <Link
+                to={item.path || "#"}
+                className="hover:text-yellow-400 flex items-center py-4"
               >
-                {shopRouteCats.children.map((child, index) => (
-                  <li
-                    key={index}
-                    className="text-textColor hover:text-textColor text-[14px] px-4 py-2 border-b border-[#f1f1f1]"
-                  >
-                    <Link to={child.path}>{child.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </li>
+                {item.title}
+                {item?.children?.length > 0 &&
+                  (openMenu === item.id ? (
+                    <ChevronUp className="w-[22px] h-[22px] ml-2" />
+                  ) : (
+                    <ChevronDown className="w-[22px] h-[22px] ml-2" />
+                  ))}
+              </Link>
 
-        <li className="text-[15px] text-heading font-semibold font-lato relative">
-          <div
-            onMouseEnter={() => setShowSubMenu(true)}
-            onMouseLeave={() => setShowSubMenu(false)}
-          >
-            <div className="flex gap-1">
-              <Link to="/shop">Products</Link>
-              {showSubMenu ? <ChevronUp className="w-[22px] h-[22px]" /> : <ChevronDown className="w-[22px] h-[22px]" />}
-            </div>
-
-            {shopRoute?.children && (
-              <ul
-                className={`absolute -left-6 bg-white shadow-md rounded-md p-2 w-40 z-20 transition-all duration-300 transform ${
-                  showSubMenu
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-95 pointer-events-none"
-                }`}
-              >
-                {shopRoute.children.map((child, index) => (
-                  <li
-                    key={index}
-                    className="text-textColor hover:text-textColor text-[14px] px-4 py-2 border-b border-[#f1f1f1]"
-                  >
-                    <Link to={child.path}>{child.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </li>
-
-        <li className="text-[15px] text-heading font-semibold font-lato">
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+              {/* Dropdown Submenu */}
+              {item.children && (
+                <ul
+                  className={`absolute left-30  w-64 bg-primary text-white shadow-lg rounded-lg transition-opacity duration-300 py-3 px-3 z-50 ${
+                    openMenu === item.id ? "block" : "hidden"
+                  }`}
+                >
+                  {item.children.map((child) => (
+                    <li
+                      key={child.id}
+                      className="px-4 py-2 font-lato font-semibold text-[13px]"
+                    >
+                      <Link to={child.path}>{child.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 }
